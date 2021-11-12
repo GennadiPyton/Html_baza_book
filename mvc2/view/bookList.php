@@ -20,6 +20,7 @@
  ?>
 
  <?php
+//Get current buffer contents and delete current output buffer
  $content = ob_get_clean();
  include 'view/templates/layout.php';
   ?>
