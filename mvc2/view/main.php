@@ -1,4 +1,5 @@
 <?php
+// Turn on output buffering
     ob_start()
  ?>
 
@@ -10,6 +11,7 @@
  </article>
 
  <?php
+        //Get current buffer contents and delete 
   $content = ob_get_clean();
  ?>
  <?php
