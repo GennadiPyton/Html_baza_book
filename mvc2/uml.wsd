@@ -1,0 +1,33 @@
+@startuml
+"user" --> "Home page"
+
+if "Go to the\n next page"
+ -->[cross\n over] " Book archive "
+ -->[cross\n over] " Book "
+ -->[comes\n back]"Book archive"
+ -right-> [comes\n back]"Home page"
+else
+ ->[inf] "main\data"
+endif
+
+@enduml
+
+
+@startuml
+Class Controlle {
+    -StartSite()
+    #BookList()
+    *getBook()
+    *getBookList()
+    ~BookOne()
+    +error404()
+}
+
+Class Model  {
+    -getBookList()
+    #getBook()
+}
+
+Controlle::getBook --> Model::getBook 
+Controlle::getBookList --> Model::getBookList 
+@enduml
